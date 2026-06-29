@@ -1,38 +1,245 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Portfolio</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="CSS/style.css">
-        <!-- Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Portfolio</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- jQuery library -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
 
-        <!-- Latest compiled JavaScript -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="CSS/style.css" />
 
-        <!--Main Script-->
-        <script src="js/script.js" async defer></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
-    </head>
-    <body>
-        <!--Navbar-->
-        <nav class="navbar navbar-inverse  navbar-fixed-top ">
-            <div class="container-fluid">
-                <ul class="nav navbar-nav navbar-right">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="funLinks.html">Fun Links</a></li>
-                <li class="active"><a href="portfolio.html" id="Portfolio-Button-Active">Portfolio</a></li>
-                </ul>
-                
-            </div>
-        </nav>
-        
-    </body>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!--Main Script-->
+    <script src="js/script.js" async defer></script>
+  </head>
+  <body>
+    <!--Navbar-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <!--Button for when navbar collapses-->
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">TJLlamaCraft</a>
+        </div>
+
+        <div class="collapse navbar-collapse me-auto" id="myNavbar">
+          <ul class="nav navbar-nav navbar-right me-auto">
+            <li class="navbarItem"><a href="index.html">Home</a></li>
+            <li class="navbarItem"><a href="#Contact-Section">Contact</a></li>
+            <li class="active navbarItem">
+              <a href="portfolio.html" id="Portfolio-Button">Portfolio</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <img src="Assets/Background.png" class="BackgroundIMG" />
+
+    <!-- #region Carousel-->
+    <div
+      id="myCarousel"
+      class="carousel slide"
+      data-ride="carousel"
+      data-interval="8000"
+    >
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+        <li data-target="#myCarousel" data-slide-to="5"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <!--#region PROJECT STUFFS IN CAROUSEL-->
+      <div class="carousel-inner">
+        <!--CABBAGE COLLECTOR-->
+        <div class="item active" id="Project-1">
+          <!--Project Panel-->
+          <div class="Project-Panel" id="Project-Panel-1">
+            <button class="Exit-Button">Close</button>
+            <h3>My Contributions</h3>
+            <p>
+              Since I was the sole developer of the project I did everything!
+              Ranging from making the sounds (from a generator), to drawing all
+              of the assets!
+            </p>
+          </div>
+
+          <img
+            src="Assets/CabbageCollectorScreenshots/Cabbage Collector.png"
+            alt="Project 1"
+            id="ProjectIMG1"
+            class="CarouselIMG"
+          />
+          
+          <div class="carousel-caption">
+            <h3>Cabbage Collector</h3>
+            <p>This is my first ever project!</p>
+          </div>
+        </div>
+
+        <!--CLOUD RUNNER-->
+        <div class="item">
+          <!--Project Panel-->
+          <div class="Project-Panel" id="Project-Panel-2">
+            <button class="Exit-Button">Close</button>
+            <h3>My Contributions</h3>
+            <p>
+              Since I was the sole developer of the project I did pretty much
+              everything! For this project though I made the bat and owl
+              characters, as well as the sounds! The rest were outsourced.
+            </p>
+          </div>
+
+          <img
+            src="Assets/CloudRunnerScreenshots/Cloud Runner.png"
+            alt="Project 2"
+            id="ProjectIMG2"
+            class="CarouselIMG"
+          />
+          <div class="carousel-caption">
+            <h3>Cloud Runner</h3>
+            <p>This is my second project!</p>
+          </div>
+        </div>
+
+        <!--SUSHI MATCH 3-->
+        <div class="item">
+          <!--Project Panel-->
+          <div class="Project-Panel" id="Project-Panel-3">
+            <button class="Exit-Button">Close</button>
+            <h3>My Contributions</h3>
+            <p>
+              Since I was the sole developer of the project I did pretty much
+              everything! For this project though I did not make ANY of the
+              assets, all of them were outsourced.
+            </p>
+          </div>
+
+          <img
+            src="Assets/SushiMatch3Screenshots/Sushi Match.png"
+            alt="Project 3"
+            id="ProjectIMG3"
+            class="CarouselIMG"
+          />
+          <div class="carousel-caption">
+            <h3>Sushi Match</h3>
+            <p>This is my third project!</p>
+          </div>
+        </div>
+
+        <!--3D Tower Defense-->
+        <div class="item">
+          <!--Project Panel-->
+          <div class="Project-Panel" id="Project-Panel-4">
+            <button class="Exit-Button">Close</button>
+            <h3>My Contributions</h3>
+            <p>
+              Since I was the sole developer of the project I did pretty much
+              everything! For this project though I only made the drawing for
+              the coin and the bone, the rest of them were outsourced.
+            </p>
+          </div>
+
+          <img
+            src="Assets/TowerDefense3DScreenshots/Screenshot 2026-06-10 002526.png"
+            alt="Project 4"
+            id="ProjectIMG4"
+            class="CarouselIMG"
+          />
+          <div class="carousel-caption">
+            <h3>3D Tower Defense</h3>
+            <p>This is my fourth project!</p>
+          </div>
+        </div>
+
+        <!--The Tomb-->
+        <div class="item">
+          <!--Project Panel-->
+          <div class="Project-Panel" id="Project-Panel-5">
+            <button class="Exit-Button">Close</button>
+            <h3>My Contributions</h3>
+            <p>
+              Since I was the sole developer of the project I did pretty much
+              everything! For this project I only made the books that lie on the
+              ground. Everything else is outsourced.
+            </p>
+          </div>
+
+          <img
+            src="Assets/TheTombScreenshots/Main Menu.png"
+            alt="Project 5"
+            id="ProjectIMG5"
+            class="CarouselIMG"
+          />
+          <div class="carousel-caption">
+            <h3>The Tomb</h3>
+            <p>This is my fifth project!</p>
+          </div>
+        </div>
+
+        <!--Lost-->
+        <div class="item">
+          <!--Project Panel-->
+          <div class="Project-Panel" id="Project-Panel-6">
+            <button class="Exit-Button">Close</button>
+            <h3>My Contributions</h3>
+            <p>
+              Since I was the sole developer of the project I did pretty much
+              everything! For this project though I did not make ANY of the
+              assets, all of them were outsourced.
+            </p>
+          </div>
+
+          <img
+            src="Assets/LostScreenshots/Main Menu.png"
+            alt="Project 6"
+            id="ProjectIMG6"
+            class="CarouselIMG"
+          />
+          <div class="carousel-caption">
+            <h3>Lost</h3>
+            <p>This is my most recent project!</p>
+          </div>
+        </div>
+      </div>
+      <!--#endregion-->
+
+      <!-- Left and right controls -->
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!--#endregion-->
+  </body>
 </html>

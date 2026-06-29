@@ -45,10 +45,9 @@
 
         <div class="collapse navbar-collapse me-auto" id="myNavbar">
           <ul class="nav navbar-nav navbar-right me-auto">
-            <li class="active"><a href="index.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="funLinks.html">Fun Links</a></li>
-            <li>
+            <li class="active navbarItem"><a href="index.html">Home</a></li>
+            <li class="navbarItem"><a href="#Contact-Section">Contact</a></li>
+            <li class="navbarItem">
               <a href="portfolio.html" id="Portfolio-Button">Portfolio</a>
             </li>
           </ul>
@@ -56,38 +55,33 @@
       </div>
     </nav>
 
+    <img src="Assets/Background.png" class="BackgroundIMG" />
+
     <!--Title Image and stuff-->
-    <div class="Title-Image"></div>
+    <div class="Title-Image"><img src="Assets/Main BG.png" /></div>
     <div class="Title-Text">
-      <div class="Title">Hi, I'm Tia-Leoni Joseph</div>
+      <div class="Title">TJLlamaCraft</div>
       <div class="subTitle">
-        I'm a game design student from South Africa! Welcome to my portfolio :D
+        A game design student from South Africa! Welcome to my portfolio :D
       </div>
     </div>
 
     <div class="About">
       <div class="About-Left">
-        <div class="Profile-Pic"></div>
-        <div class="btn-group btn-group-md" id="Profile-Buttons">
-          <button type="button" class="btn btn-danger" id="ItchButton">
-            Itch
-          </button>
-          <button type="button" class="btn btn-danger" id="LinkedInButton">
-            LinkedIn
-          </button>
-          <button type="button" class="btn btn-danger" id="InstaButton">
-            Insta
-          </button>
-        </div>
+        <div class="Profile-Pic"><img src="Assets/Profile Pic.png" /></div>
+        <p>Drawn by me!</p>
       </div>
       <div id="About-Text">
         <p>
-          Hi, I'm Tia-Leoni, a South African Game Design student! My passions
-          are art and design. I love thinking about how to make a game or piece
-          of art an experience for the viewer. I love thinking about how a
-          choice would make the player think and feel, and all the different
-          techniques one can use to achieve the feeling I am looking for!
+          Hi, I'm TJLlamaCraft aka Tia-Leoni Joseph, a South African Game Design
+          student! My passions are art and design. I love thinking about how to
+          make a game or piece of art an experience for the viewer. I love
+          thinking about how a choice would make the player think and feel, and
+          all the different techniques one can use to achieve the feeling I am
+          looking for!
         </p>
+
+        <p>I am skilled in using Krita, Unity 2D AND 3D, and Aesprite :D!</p>
       </div>
     </div>
 
@@ -98,42 +92,42 @@
         <div class="row">
           <div class="col-sm-4">
             <div class="column" id="Project1">
+              <img
+                src="Assets/TowerDefense3DScreenshots/Screenshot 2026-06-10 002526.png"
+              />
+
               <div class="Project-Name">
-                <p>Project 1</p>
+                <p>3D Tower Defense Game</p>
                 <p class="P-Description">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                  Consectetur adipiscing elit quisque faucibus ex sapien vitae.
-                  Ex sapien vitae pellentesque sem placerat in id. Placerat in
-                  id cursus mi pretium tellus duis. Pretium tellus duis
-                  convallis tempus leo eu aenean.
+                  Since I was the sole developer of the project I did pretty
+                  much everything! For this project I only made the books that
+                  lie on the ground. Everything else is outsourced.
                 </p>
               </div>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="column" id="Project2">
+              <img src="Assets/TheTombScreenshots/Main.png" />
               <div class="Project-Name">
-                <p>Project 2</p>
+                <p>The Tomb</p>
                 <p class="P-Description">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                  Consectetur adipiscing elit quisque faucibus ex sapien vitae.
-                  Ex sapien vitae pellentesque sem placerat in id. Placerat in
-                  id cursus mi pretium tellus duis. Pretium tellus duis
-                  convallis tempus leo eu aenean.
+                  Since I was the sole developer of the project I did pretty
+                  much everything! For this project though I did not make ANY of
+                  the assets, all of them were outsourced.
                 </p>
               </div>
             </div>
           </div>
           <div class="col-sm-4">
             <div class="column" id="Project3">
+              <img src="Assets/LostScreenshots/Portal.png" />
               <div class="Project-Name">
-                <p>Project 3</p>
+                <p>Lost</p>
                 <p class="P-Description">
-                  Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                  Consectetur adipiscing elit quisque faucibus ex sapien vitae.
-                  Ex sapien vitae pellentesque sem placerat in id. Placerat in
-                  id cursus mi pretium tellus duis. Pretium tellus duis
-                  convallis tempus leo eu aenean.
+                  Since I was the sole developer of the project I did pretty
+                  much everything! For this project though I did not make ANY of
+                  the assets, all of them were outsourced.
                 </p>
               </div>
             </div>
@@ -146,16 +140,64 @@
     </div>
 
     <div class="FollowME">
-        <h3>Find me here!</h3>
-        <div class="FollowME-BTNs">
-                <button type="button" class="FollowME-BTNs-Style">Linked In</button>
-                <button type="button" class="FollowME-BTNs-Style">Itch</button>
-                <button type="button" class="FollowME-BTNs-Style">Instagram</button>
-        </div>
-        </div>
+      <h3>Find me here!</h3>
+      <div class="FollowME-BTNs">
+        <button type="button" class="FollowME-BTNs-Style" id="LinkedInButton">
+          Linked In
+        </button>
+        <button type="button" class="FollowME-BTNs-Style" id="ItchButton">
+          Itch
+        </button>
+        <button type="button" class="FollowME-BTNs-Style" id="InstaButton">
+          Instagram
+        </button>
+      </div>
     </div>
-    <footer>
 
-    </footer>
+    <!--Contact-->
+    <div id="Contact-Section">
+      <h2>Contact Me!</h2>
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <div class="form-group">
+          <label for="accessKey"></label>
+          <input
+            type="hidden"
+            name="access_key"
+            value="f679e1c8-95d0-40d4-917c-4b42afa00962"
+          />
+        </div>
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input
+            type="email"
+            name="email"
+            class="form-control"
+            id="email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea name="message" class="form-control" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+
+      <div class="Contact-Left">
+        <img src="Assets/Main PFP.png">
+      </div>
+    </div>
+
+    <footer></footer>
   </body>
 </html>

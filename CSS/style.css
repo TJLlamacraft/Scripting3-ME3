@@ -1,25 +1,55 @@
+@font-face {
+  font-family: "Jeresy10";
+  src: url(Fonts/Jersey10-Regular.ttf);
+}
+
+@font-face {
+  font-family: "Blox";
+  src: url(Fonts/Blox2.ttf);
+}
+
 body {
   background-color: black;
+  font-family: "Jeresy10", sans-serif;
+  color: #c7c7c7;
+}
+
+.BackgroundIMG {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  opacity: 55%;
+
+  object-fit: fill;
+  z-index: -1;
+  position: fixed;
 }
 
 #Portfolio-Button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 51, 51);
-  border-radius: 15%;
-  width: 80px;
+  background-image: linear-gradient(162deg, rgb(255 228 0), rgb(241 14 14));
+  border-radius: 10px;
+  width: auto;
   color: rgb(226, 226, 226);
 }
 
-#Portfolio-Button-Active {
+#Portfolio-Button:hover {
+  color: #333;
+}
+
+.active #Portfolio-Button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(139, 28, 28);
+  background-image: linear-gradient(162deg, rgb(168, 152, 1), rgb(131, 9, 9));
   border-radius: 15%;
-  width: 80px;
-  color: white;
+  width: auto;
+  color: rgb(207, 205, 205);
 }
 
 .Title-Image {
@@ -29,21 +59,25 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(0, 0, 0);
-  object-fit: cover;
-  z-index: -1;
+  filter: blur(5px);
+
+  object-fit: fill;
+  z-index: -2;
   position: fixed;
 }
 
 .Title {
+  font-family: "Blox", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 6vw;
+  text-align: center;
+  font-size: 13vw;
   color: white;
 }
 
 .subTitle {
+  font-family: "Jeresy10", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -59,28 +93,47 @@ body {
   justify-content: flex-start;
   align-items: center;
 
-  background-color: grey;
+  background-color: rgba(128, 128, 128, 0.24);
   height: 35vw;
+  min-width: 200px;
   margin-top: 30px;
   border-radius: 20px;
   overflow: hidden;
+  z-index: -2;
+}
+
+.column img {
+  display: flex;
+  flex-direction: column;
+  justify-self: flex-start;
+  align-self: center;
+
+  height: 100%;
+  position: fixed;
   z-index: -1;
 }
 
 #Projects-Button {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   justify-self: center;
-  align-self: center;
 
-  height: 3.5vw;
-  background-color: rgb(255, 51, 51);
+  height: 4.2vw;
+  background-image: linear-gradient(162deg, rgb(255 228 0), rgb(241 14 14));
   border-radius: 10px;
   border: none;
-  font-size: 1.3vw;
+  font-size: 2.3vw;
   margin-top: 10px;
+  padding-left: 1vw;
+  padding-right: 1vw;
+}
+
+#Projects-Button:hover {
+  color: #333;
+}
+
+.Projects-Grid .container {
+  width: 70vw;
 }
 
 .About {
@@ -91,7 +144,7 @@ body {
   justify-content: center;
   align-items: center;
 
-  background-color: rgb(214, 214, 214);
+  background-image: linear-gradient(150deg, rgb(8, 9, 44), rgb(59, 5, 5));
   width: 100vw;
   height: auto;
   margin-top: 30px;
@@ -108,13 +161,28 @@ body {
   margin-top: 25px;
   width: 30vw;
   height: auto;
+  font-size: clamp(15px, 2vw, 40px);
+}
+
+.About-Left .btn-danger {
+  background-image: linear-gradient(162deg, rgb(255 228 0), rgb(241 14 14));
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 10px;
 }
 
 .Profile-Pic {
   width: 20vw;
   aspect-ratio: 1 / 1;
-  border-radius: 50%;
-  background-color: black;
+  border-radius: 40px;
+  background-color: rgba(0, 0, 0, 0.33);
+  border: 3px black solid;
+  overflow: hidden;
+}
+
+.Profile-Pic img {
+  width: 104%;
+  object-fit: cover;
 }
 
 #Profile-Buttons {
@@ -123,7 +191,11 @@ body {
 
 #About-Text {
   width: 46vw;
-  font-size: 1.6vw;
+  font-size: 1.8vw;
+}
+
+.About .btn {
+  font-size: 1.4vw;
 }
 
 .Project-Image {
@@ -196,12 +268,17 @@ h3 {
 .FollowME-BTNs-Style {
   width: 20vw;
   aspect-ratio: 1/0.4;
-  background-color: rgb(255, 51, 51);
+
+  background-image: linear-gradient(162deg, rgb(255 228 0), rgb(241 14 14));
   color: white;
   border-radius: 20px;
   border: none;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.FollowME-BTNs-Style:hover {
+  color: #333;
 }
 
 @keyframes fade-out-Title {
@@ -240,9 +317,155 @@ h3 {
 
 footer {
   width: 100vw;
-  height: 30vw;
-  background-color: lightgray;
+  height: 10vw;
+  background-image: linear-gradient(150deg, rgb(3, 3, 29), rgb(22, 1, 1));
   margin-top: 30px;
+}
+
+#Contact-Section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+
+  width: 100vw;
+  height: 40vw;
+  background-image: linear-gradient(150deg, rgb(8, 9, 44), rgb(59, 5, 5));
+  padding-left: 10vw;
+}
+
+#Contact-Section h2 {
+  color: white;
+  margin-top: 0;
+  margin-left: 12vw;
+  font-size: 2.7vw;
+  padding-bottom: 1vw;
+}
+
+#Contact-Section form {
+  width: 35vw;
+  font-size: 1.3vw;
+}
+
+#Contact-Section textarea {
+  height: 8vw;
+}
+
+.Contact-Left {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+
+  margin-right: 9vw;
+  width: 28vw;
+  border-radius: 20px;
+  border: 5px black solid;
+  overflow: hidden;
+  transform: scaleX(-1);
+}
+
+.navbar-brand {
+  font-size: clamp(15px, 2.3vw, 60px);
+}
+
+.navbar {
+  height: 2.4vw;
+}
+
+.navbarItem {
+  width: auto;
+  font-size: clamp(15px, 2.3vw, 60px);
+}
+
+.navbar-right {
+  margin-right: 20px;
+}
+
+.Project-Panel {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  padding: 2vw 2vw;
+
+  background-image: linear-gradient(150deg, rgb(8, 9, 44), rgb(59, 5, 5));
+  color: white;
+  height: 100%;
+  width: 50vw;
+  margin-top: 50px;
+  z-index: 20;
+}
+
+.Exit-Button {
+  position: absolute;
+  display: flex;
+  text-align: center;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+
+  width: 5.5vw;
+  min-width: 60px;
+  aspect-ratio: 2/1;
+  background-image: linear-gradient(162deg, rgb(255 228 0), rgb(241 14 14));
+  border: none;
+  border-radius: 10px;
+  font-size: clamp(22px, 2vw, 50px);
+}
+
+.Exit-Button:hover {
+  color: #333;
+}
+
+.form-group {
+  margin-bottom: 10px;
+  font-size: 1.7vw;
+}
+
+.form-control {
+  font-size: 1.5vw;
+}
+
+form .btn {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  text-align: center;
+
+  background-image: linear-gradient(162deg, rgb(255 228 0), rgb(241 14 14));
+  border: none;
+  height: 2.4vw;
+  width: auto;
+  border-radius: 10px;
+  font-size: 1.6vw;
+  color: white;
+}
+
+#myCarousel .item img {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -2;
+}
+
+#myCarousel p {
+  font-size: clamp(30px, 2vw, 80px);
+}
+
+#myCarousel h3 {
+  font-size: clamp(50px, 4vw, 100px);
+}
+.carousel-caption {
+  background-image: linear-gradient(
+    0deg,
+    rgb(0 0 0),
+    rgb(42 0 0),
+    rgb(98 0 0 / 60%),
+    rgb(255 0 0 / 0%)
+  );
+  padding-bottom: 3vw;
+  border-radius: 20px;
 }
 
 @media only screen and (max-width: 765px) {
@@ -282,12 +505,58 @@ footer {
     width: 30vw;
   }
 
-  h2{
+  h2 {
     font-size: 6vw;
   }
 
-  h3{
+  h3 {
     font-size: 4vw;
   }
-}
 
+  #Contact-Section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    width: 100vw;
+    height: 100vw;
+    background-color: lightgrey;
+    padding-left: 0vw;
+    margin-top: 30px;
+  }
+
+  #Contact-Section h2 {
+    margin-top: 0;
+    margin-left: 0vw;
+    font-size: 4.7vw;
+    padding-bottom: 0vw;
+  }
+
+  #Contact-Section form {
+    width: 60vw;
+    font-size: 2.3vw;
+  }
+
+  #Contact-Section textarea {
+    height: 20vw;
+  }
+
+  .Contact-Left{
+    display:none;
+  }
+  .navbar-inverse .navbar-collapse {
+    background-color: #313030;
+    text-align: center;
+  }
+
+  .navbarItem {
+    width: 100vw;
+  }
+
+  .Project-Panel {
+    height: 100%;
+    width: 100vw;
+  }
+}
