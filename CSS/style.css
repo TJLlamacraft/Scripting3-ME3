@@ -72,7 +72,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 13vw;
+  font-size: clamp(40px, 13vw, 3000px);
   color: white;
 }
 
@@ -82,7 +82,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 2.7vw;
+  font-size: clamp(20px, 2.7vw, 2000px);
   color: rgb(163, 163, 163);
   width: 56vw;
 }
@@ -118,11 +118,11 @@ body {
   align-items: center;
   justify-self: center;
 
-  height: 4.2vw;
+  height: clamp(34px, 4.2vw, 1000px);
   background-image: linear-gradient(162deg, rgb(255 228 0), rgb(241 14 14));
   border-radius: 10px;
   border: none;
-  font-size: 2.3vw;
+  font-size: clamp(25px, 2.3vw, 1000px);
   margin-top: 10px;
   padding-left: 1vw;
   padding-right: 1vw;
@@ -133,7 +133,7 @@ body {
 }
 
 .Projects-Grid .container {
-  width: 70vw;
+  width: clamp(230px, 70vw, 3000px);
 }
 
 .About {
@@ -172,7 +172,7 @@ body {
 }
 
 .Profile-Pic {
-  width: 20vw;
+  width: clamp(145px, 20vw, 2000px);
   aspect-ratio: 1 / 1;
   border-radius: 40px;
   background-color: rgba(0, 0, 0, 0.33);
@@ -191,7 +191,7 @@ body {
 
 #About-Text {
   width: 46vw;
-  font-size: 1.8vw;
+  font-size: clamp(18px, 1.8vw, 40px);
 }
 
 .About .btn {
@@ -204,6 +204,8 @@ body {
   background-color: rgb(54 54 54);
 }
 
+
+
 .Project-Name {
   display: flex;
   flex-direction: column;
@@ -211,19 +213,18 @@ body {
   align-items: center;
 
   width: 100%;
-  height: 100%;
-  font-size: 2.4vw;
+  height: 30vw;
+  font-size: clamp(30px, 2.4vw, 2000px);
   color: rgb(255, 255, 255);
-  margin-top: 31vw;
-  margin-bottom: 30px;
+  margin-top: clamp(160px, 31vw, 1000px);
+  overflow:scroll;
   background-color: rgb(54 54 54);
   z-index: 1;
-  padding-bottom: 400px;
 }
 
 .P-Description {
   width: 90%;
-  font-size: 1.5vw;
+  font-size: clamp(18px, 1.5vw, 200px);
   text-align: center;
 }
 h2 {
@@ -233,7 +234,7 @@ h2 {
   text-align: center;
   margin-top: 30px;
   color: white;
-  font-size: 3vw;
+  font-size: clamp(70px, 3vw, 200px);
 }
 h3 {
   display: flex;
@@ -242,7 +243,7 @@ h3 {
   text-align: center;
   margin-top: 30px;
   color: white;
-  font-size: 2vw;
+  font-size: clamp(50px, 2vw, 1000px);
 }
 
 .Bottom-Button {
@@ -312,7 +313,7 @@ h3 {
   justify-content: center;
   align-items: center;
   width: auto;
-  font-size: 3vw;
+  font-size: clamp(35px, 3vw, 100px);
 }
 
 footer {
@@ -513,19 +514,6 @@ form .btn {
 }
 
 @media only screen and (max-width: 765px) {
-  #Projects-Button {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    justify-self: center;
-    align-self: center;
-    height: 6.5vw;
-    background-color: rgb(255, 51, 51);
-    border-radius: 10px;
-    border: none;
-    font-size: 2.4vw;
-  }
 
   .About {
     display: flex;
@@ -541,20 +529,7 @@ form .btn {
 
   #About-Text {
     text-align: center;
-    font-size: 3.2vw;
-    width: 56vw;
-  }
-
-  .Profile-Pic {
-    width: 30vw;
-  }
-
-  h2 {
-    font-size: 6vw;
-  }
-
-  h3 {
-    font-size: 4vw;
+    width: 85vw;
   }
 
   #Contact-Section {
@@ -565,7 +540,7 @@ form .btn {
     text-align: center;
 
     width: 100vw;
-    height: 100vw;
+    height: 124vw;
     background-color: lightgrey;
     padding-left: 0vw;
     margin-top: 30px;
@@ -574,8 +549,9 @@ form .btn {
   #Contact-Section h2 {
     margin-top: 0;
     margin-left: 0vw;
-    font-size: 4.7vw;
+    font-size: 13.7vw;
     padding-bottom: 0vw;
+    margin-bottom: -28px;
   }
 
   #Contact-Section form {
@@ -583,8 +559,21 @@ form .btn {
     font-size: 2.3vw;
   }
 
+  #Contact-Section .form-group{
+    font-size: 6.7vw;
+  }
+
+    #Contact-Section .form-control{
+    font-size: 4.5vw;
+  }
+
   #Contact-Section textarea {
     height: 20vw;
+  }
+
+  form .btn{
+    height: 9.4vw;
+    font-size: 10vw;
   }
 
   .Contact-Left {
@@ -602,5 +591,20 @@ form .btn {
   .Project-Panel {
     height: 100%;
     width: 100vw;
+  }
+
+  .FollowME-BTNs{
+    flex-direction: column;
+    gap:20px;
+    font-size: 12vw;
+  }
+
+  .FollowME{
+    height: 100vw;
+    margin-bottom: 20px;
+  }
+
+  .FollowME-BTNs-Style{
+    width:auto;
   }
 }

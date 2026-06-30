@@ -9,7 +9,7 @@ $(document).ready(function () {
   }
 
   // Create a MediaQueryList object
-  var x = window.matchMedia("(max-width: 765px)");
+  var x = window.matchMedia("(max-width: 765px)"); //true or false check 
 
   // Call listener function at run time
   myFunction(x);
@@ -60,7 +60,7 @@ $(document).ready(function () {
     });
 
     $("#Project1 .Project-Name").animate({
-      marginTop: "31vw",
+      marginTop: x.matches ? "40%" : "31vw",
     });
   });
 
@@ -71,7 +71,7 @@ $(document).ready(function () {
     });
 
     $("#Project2 .Project-Name").animate({
-      marginTop: "31vw",
+      marginTop: x.matches ? "40%" : "31vw",
     });
   });
 
@@ -82,9 +82,10 @@ $(document).ready(function () {
     });
 
     $("#Project3 .Project-Name").animate({
-      marginTop: "31vw",
+      marginTop: x.matches ? "40%" : "31vw",
     });
   });
+  
 
   //#endregion
 
@@ -146,8 +147,6 @@ $(document).ready(function () {
   $("#InstaButton").click(() => {
     window.open("https://www.instagram.com/tjllamacraft/", "_blank");
   });
-
-  
 
   //#endregion
 });
